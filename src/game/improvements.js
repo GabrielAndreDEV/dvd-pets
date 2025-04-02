@@ -1,4 +1,8 @@
-const BASE_SPRITE_PATH = '/images/upgrades'
+import tomatoBallImg from '/images/upgrades/tomato_ball.png'
+import tomatoRiceImg from '/images/upgrades/tomato_rice.png'
+import tomatoToyImg from '/images/upgrades/tomato_toy.png'
+import butterImg from '/images/upgrades/butter.png'
+import butterBoneImg from '/images/upgrades/buttery_bone.png'
 
 export const IMPROVEMENTS = [
     {
@@ -8,7 +12,7 @@ export const IMPROVEMENTS = [
         description:
             'Uma bola identica a um tomate, os gatos adoram brincar com ela, ele corre bastante pra pega-la aumentando sua velocidade em 20%',
         price: 250,
-        spritPath: `${BASE_SPRITE_PATH}/tomato_ball.png`,
+        spritPath: tomatoBallImg,
         increment: 1.2
     },
     {
@@ -18,7 +22,7 @@ export const IMPROVEMENTS = [
         description:
             'Um tipo de comida especial para gatos tomates, eles ficam satisfeitos por mais tempo aumentando a geração de love em 10%',
         price: 2500,
-        spritPath: `${BASE_SPRITE_PATH}/tomato_rice.png`,
+        spritPath: tomatoRiceImg,
         increment: 1.1
     },
     {
@@ -28,7 +32,7 @@ export const IMPROVEMENTS = [
         description:
             'Todos os seus gatos tomates adoram esse brinquedo, para cada gato tomate que você tem, você ganha 1% de geração de love a mais',
         price: 25000,
-        spritPath: `${BASE_SPRITE_PATH}/tomato_toy.png`,
+        spritPath: tomatoToyImg,
         increment: 1.01
     },
     {
@@ -38,7 +42,7 @@ export const IMPROVEMENTS = [
         description:
             'Uma manteiga especial para cachorros pães, CHEGA A MANTEIGA DERRETE, aumentando a geração de love em 20%',
         price: 2500,
-        spritPath: `${BASE_SPRITE_PATH}/butter.png`,
+        spritPath: butterImg,
         increment: 1.2
     },
     {
@@ -48,7 +52,7 @@ export const IMPROVEMENTS = [
         description:
             'Um osso delicinha para os seus cachorros pães, eles são totalmente atraidos por ele, aumentando a sua velocidade em 10%',
         price: 25000,
-        spritPath: `${BASE_SPRITE_PATH}/buttery_bone.png`,
+        spritPath: butterBoneImg,
         increment: 1.1
     },
     {

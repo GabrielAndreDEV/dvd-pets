@@ -1,7 +1,8 @@
 import Pet from './pet'
+import sprite from '/images/pets/scarry_dog.webp'
 
 export default class ScarryDog extends Pet {
-    static SPRITE_PATH = `${Pet.BASE_SPRITE_PATH}/scarry_dog.webp`
+    static SPRITE_PATH = sprite
     static NAME = 'Cachorrinho'
     static PRICE = 666
     static TYPE = 'scarry_dog'
