@@ -1,5 +1,5 @@
-@import './shop.scss';
-@import './placeholders.scss';
+@use './shop.scss';
+@use './placeholders.scss';
 
 html,
 body {
@@ -13,7 +13,7 @@ body {
 #app {
     height: 100%;
     width: 100%;
-    background-image: url('https://construct-static.com/uploads/116805/c1f0164b-59ff-42e1-961a-78c709b58dd6/example03.png');
+    background-image: url('/images/background.webp');
 }
 
 #game-score {

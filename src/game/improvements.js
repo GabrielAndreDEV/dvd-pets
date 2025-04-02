@@ -1,4 +1,4 @@
-const BASE_SPRITE_PATH = '/src/assets/sprites/upgrades'
+const BASE_SPRITE_PATH = '/images/upgrades'
 
 export const IMPROVEMENTS = [
     {
