@@ -1,7 +1,8 @@
 import Pet from './pet'
+import sprite from '/images/pets/bananamster.png'
 
 export default class Bananamster extends Pet {
-    static SPRITE_PATH = `${Pet.BASE_SPRITE_PATH}/bananamster.png`
+    static SPRITE_PATH = sprite
     static NAME = 'Bananhamster'
     static PRICE = 1250
     static DEFAULT_WIDTH = 130

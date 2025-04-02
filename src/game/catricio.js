@@ -1,4 +1,7 @@
+import defaultImg from '/images/catricio/catricio-1.png'
+import grabImg from '/images/catricio/catricio-2.png'
+
 export const CATRICIO = {
-    default: '/images/catricio/catricio-1.png',
-    grab: '/images/catricio/catricio-2.png'
+    default: defaultImg,
+    grab: grabImg
 }
