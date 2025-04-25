@@ -80,8 +80,6 @@ export default class Pet {
             score: score ?? 0,
             description: description ?? ''
         })
-
-        console.log(this.state)
     }
 
     createSprite() {
