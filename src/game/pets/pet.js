@@ -11,6 +11,7 @@ export default class Pet {
     static BONUS_MULTIPLIER = 100
     static BONUS_MULTIPLIER_SPEED = 1.5
     static INCREMENT_PET_BUY = 0.2
+    static BUY_LIMIT = null
 
     constructor(gameInstance, stateParams, utils = Utils) {
         this.utils = utils()

@@ -120,8 +120,9 @@ export const Game = (container, Utils = utility) => {
         const price = utils.getPetPrice(state.pets, PetClass)
         const width = state.canvasState.width - state.sprites.pets[type].width
         const height = state.canvasState.height - state.sprites.pets[type].height
+        const count = countPetsByType(type)
 
-        if (!PetClass || state.score < price) return
+        if (!PetClass || state.score < price || (PetClass.BUY_LIMIT && count >= PetClass.BUY_LIMIT)) return
 
         const alreadyHave = !!state.pets.find((pet) => pet.state.type === PetClass.TYPE)
         const Pet = new PetClass(state, { position: getUniqueRandomPosition(width, height) })
@@ -258,6 +259,7 @@ export const Game = (container, Utils = utility) => {
         state.dispachClick = dispatchClick
         state.changePetPreview = changePetPreview
         state.dispatchClick = dispatchClick
+        state.countPetsByType = countPetsByType
     }
 
     const setGameLayout = () => {
@@ -326,14 +328,20 @@ export const Game = (container, Utils = utility) => {
         await Promise.all([createPetSprites(), createCatricioSprites(), createImprovementSprites()])
     }
 
+    const countPetsByType = (type) => {
+        const pets = getPets().filter((p) => p.state.type === type)
+
+        return pets.length
+    }
+
     const init = () => {
         setState({ container })
         createSprites().then(() => {
+            setInstance()
             getStorageState()
             setGameLayout()
             setCanvasContainer()
             createCanvas()
-            setInstance()
             addResize()
             gameCycle()
         })

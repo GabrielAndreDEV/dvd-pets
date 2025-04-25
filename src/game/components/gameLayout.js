@@ -141,7 +141,6 @@ export const GameLayout = (gameInstance) => {
 
     const renderShopItems = () => {
         return Object.values(PETS)
-            .filter((pet) => pet.TYPE !== 'scarry_dog')
             .sort((a, b) => utils.sortByAsc(a.PRICE, b.PRICE))
             .map((pet) => renderShopItem(pet))
             .join('')
@@ -158,8 +157,11 @@ export const GameLayout = (gameInstance) => {
     }
 
     const renderShopItem = (pet) => {
+        const count = gameInstance.countPetsByType(pet.TYPE)
+        const disabled = pet.BUY_LIMIT && count >= pet.BUY_LIMIT
+
         return `
-            <div id="shop-item">
+            <div id="shop-item" class="${disabled ? 'disabled' : ''}">
                 <div class="card" data-pet-type="${pet.TYPE}" title="Comprar">
                     <div class="card-body d-flex px-2">
                         <div class="shop-pet-img">
